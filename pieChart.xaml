@@ -1,0 +1,139 @@
+﻿<UserControl x:Class="Supermarket.pieChart"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Supermarket"
+             xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
+             xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             mc:Ignorable="d" d:DesignWidth="800" Height="329"
+             d:DataContext="{d:DesignInstance local:pieChart}">
+
+    <Grid Height="332">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="233*"/>
+            <ColumnDefinition Width="567*"/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel HorizontalAlignment="Left" Height="332" VerticalAlignment="Top" Width="800" Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" Grid.ColumnSpan="2"/>
+        <TextBlock HorizontalAlignment="Left" Margin="6,8,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="#FF6DAC1D" FontWeight="Bold" FontSize="25" FontFamily="Segoe UI Semibold" Width="185" Height="42"><Run FlowDirection="RightToLeft" Text="SMARTSHOP"/><LineBreak/><Run FlowDirection="RightToLeft"/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="26,44,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="#FF0D0D0D" FontSize="20" FontFamily="Century Gothic" Width="210" Height="43" Grid.ColumnSpan="2"><Run Text="Shop And Buy Simply"/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="403.281,384,0,-93" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="#FF0D0D0D" FontSize="15" FontFamily="Century Gothic" Width="145" Height="41" Grid.Column="1"><Run Text="Adi Giladi | Li Edri"/><LineBreak/><Run Text="WPF project 2021"/></TextBlock>
+        <TextBlock HorizontalAlignment="Right" Margin="0,12,13,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="#FF0D0D0D" FontSize="30" FontFamily="Century Gothic" Width="183" Height="55" TextAlignment="Right" Grid.Column="1"><Run FlowDirection="RightToLeft" Text="סטטיסטיקות"/></TextBlock>
+        <Border BorderBrush="{DynamicResource {x:Static SystemColors.ControlLightLightBrushKey}}" BorderThickness="1" HorizontalAlignment="Left" Height="239" Margin="8,83,0,0" VerticalAlignment="Top" Width="165" Background="{DynamicResource {x:Static SystemColors.ControlLightLightBrushKey}}" materialDesign:ShadowAssist.ShadowDepth="Depth3" Opacity="0.75">
+            <Border BorderBrush="{DynamicResource {x:Static SystemColors.ControlLightLightBrushKey}}" BorderThickness="1" HorizontalAlignment="Left" Height="133" Margin="-1.333,-2.333,-1,0" VerticalAlignment="Top" Width="165" Background="{DynamicResource {x:Static SystemColors.ControlLightLightBrushKey}}" materialDesign:ShadowAssist.ShadowDepth="Depth3">
+                <TreeView
+                    MinWidth="160" Margin="-0.333,-0.333,0,1" HorizontalAlignment="Left" Width="160" ScrollViewer.HorizontalScrollBarVisibility="Hidden" ScrollViewer.VerticalScrollBarVisibility="Hidden" Padding="1">
+                    <TreeViewItem x:Name="PurchaseStatistics"
+                        Header="Purchase statistics" Padding="8,5"/>
+                    <TreeViewItem
+                        Header="Graphs" Padding="8,5">
+                        <TreeViewItem x:Name="PieChart" Height="24">
+                            <TreeViewItem.Header>
+                                <StackPanel
+                                    Orientation="Horizontal">
+                                    <TextBlock
+                                        Margin="8 0 0 0"
+                                        Text="Pie Chart" />
+                                </StackPanel>
+                            </TreeViewItem.Header>
+                        </TreeViewItem>
+                        <TreeViewItem Height="27" x:Name="ColumnChart">
+                            <TreeViewItem.Header>
+                                <StackPanel
+                                    Orientation="Horizontal">
+                                    <TextBlock
+                                        Margin="8 0 0 0"
+                                        Text="Column chart" />
+                                </StackPanel>
+                            </TreeViewItem.Header>
+                        </TreeViewItem>
+                    </TreeViewItem>
+                </TreeView>
+            </Border>
+        </Border>
+        <Image HorizontalAlignment="Left" Height="120" Margin="16,193,0,0" VerticalAlignment="Top" Width="149" RenderTransformOrigin="0.5,0.5" Stretch="UniformToFill" Source="OSPZNJ0.jpg"/>
+
+        <Border x:Name="tableBorder" Margin="29.667,51,28,19" Grid.Column="1" Visibility="Collapsed">
+            <ListView x:Name="prodList"
+                    ItemsSource="{Binding}" Grid.Column="1">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Header="הסתברות">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock Margin="5, 0" Text="{Binding Confidence}"/>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                        <GridViewColumn Header="שם">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock Margin="5, 0" Text="{Binding Prod2.Name}"/>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                        <GridViewColumn Header="מוצר 2">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Image Margin="5, 0" Source="{Binding image2}" Width="30" Height="30"/>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                        <GridViewColumn Header = "שם">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock Margin="5, 0" Text="{Binding Prod1.Name}"/>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                        <GridViewColumn Header="מוצר 1">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Image Margin="5, 0" Source="{Binding image1}" Height="30" Width="30"/>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+
+                    </GridView>
+                </ListView.View>
+            </ListView>
+        </Border>
+        <Border x:Name="pieBorder" Margin="29.667,44,18,10" Grid.Column="1" Visibility="Collapsed">
+            <Grid Margin="-31,0,-0.333,0">
+                <ComboBox x:Name="comboBox" SelectionChanged="chooseComboBox"
+                    Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                    materialDesign:HintAssist.Hint="אפשרויות ניתוח קניות" Height="48" Margin="373,32,14,198">
+                    <ComboBoxItem x:Name="byProduct"
+                        Content="מוצר"/>
+                    <ComboBoxItem x:Name="byCategory"
+                        Content="קטגוריה" />
+                    <ComboBoxItem x:Name="byWeek"
+                        Content="שבועי" />
+                </ComboBox>
+                <lvc:PieChart Name="Chart" 
+                      LegendLocation="Bottom" InnerRadius="0" Margin="-16,10,0,18" Width="439" HorizontalAlignment="Left">
+                    <lvc:PieChart.ChartLegend>
+                        <lvc:DefaultLegend BulletSize="20"></lvc:DefaultLegend>
+                    </lvc:PieChart.ChartLegend>
+                    <lvc:PieChart.DataTooltip>
+                        <lvc:DefaultTooltip BulletSize="20"></lvc:DefaultTooltip>
+                    </lvc:PieChart.DataTooltip>
+                </lvc:PieChart>
+            </Grid>
+        </Border>
+        <Border x:Name="colBorder" Margin="17.667,51,18,10" Grid.Column="1" Visibility="Visible">
+            <Grid>
+                <lvc:CartesianChart x:Name="colChart" Series="{Binding SeriesCollection}" LegendLocation="Right" >
+                    <lvc:CartesianChart.AxisY>
+                        <lvc:Axis x:Name="colY" Title="Categories"></lvc:Axis>
+                    </lvc:CartesianChart.AxisY>
+                    <lvc:CartesianChart.AxisX>
+                        <lvc:Axis Title="Days" Labels="{Binding Labels}"></lvc:Axis>
+                    </lvc:CartesianChart.AxisX>
+                </lvc:CartesianChart>
+            </Grid>
+        </Border>
+    </Grid>
+</UserControl>

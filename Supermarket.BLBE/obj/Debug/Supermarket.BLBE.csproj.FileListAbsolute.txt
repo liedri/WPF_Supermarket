@@ -1,0 +1,17 @@
+C:\Users\adigi\source\repos\Supermarket\Supermarket.BLBE\bin\Debug\Supermarket.BLBE.dll
+C:\Users\adigi\source\repos\Supermarket\Supermarket.BLBE\bin\Debug\Supermarket.BLBE.pdb
+C:\Users\adigi\source\repos\Supermarket\Supermarket.BLBE\obj\Debug\Supermarket.BLBE.csproj.CoreCompileInputs.cache
+C:\Users\adigi\source\repos\Supermarket\Supermarket.BLBE\obj\Debug\Supermarket.BLBE.dll
+C:\Users\adigi\source\repos\Supermarket\Supermarket.BLBE\obj\Debug\Supermarket.BLBE.pdb
+C:\Users\adigi\source\repos\Supermarket\Supermarket.BLBE\obj\Debug\Supermarket.BLBE.csprojAssemblyReference.cache
+C:\Users\lib61\OneDrive\שולחן העבודה\newpro\Supermarket\Supermarket.BLBE\bin\Debug\Supermarket.BLBE.dll
+C:\Users\lib61\OneDrive\שולחן העבודה\newpro\Supermarket\Supermarket.BLBE\bin\Debug\Supermarket.BLBE.pdb
+C:\Users\lib61\OneDrive\שולחן העבודה\newpro\Supermarket\Supermarket.BLBE\obj\Debug\Supermarket.BLBE.csproj.CoreCompileInputs.cache
+C:\Users\lib61\OneDrive\שולחן העבודה\newpro\Supermarket\Supermarket.BLBE\obj\Debug\Supermarket.BLBE.dll
+C:\Users\lib61\OneDrive\שולחן העבודה\newpro\Supermarket\Supermarket.BLBE\obj\Debug\Supermarket.BLBE.pdb
+C:\Users\adigi\source\repos\Supermarket_2\Supermarket\Supermarket.BLBE\bin\Debug\Supermarket.BLBE.dll
+C:\Users\adigi\source\repos\Supermarket_2\Supermarket\Supermarket.BLBE\bin\Debug\Supermarket.BLBE.pdb
+C:\Users\adigi\source\repos\Supermarket_2\Supermarket\Supermarket.BLBE\obj\Debug\Supermarket.BLBE.csproj.CoreCompileInputs.cache
+C:\Users\adigi\source\repos\Supermarket_2\Supermarket\Supermarket.BLBE\obj\Debug\Supermarket.BLBE.dll
+C:\Users\adigi\source\repos\Supermarket_2\Supermarket\Supermarket.BLBE\obj\Debug\Supermarket.BLBE.pdb
+C:\Users\adigi\source\repos\Supermarket_2\Supermarket\Supermarket.BLBE\obj\Debug\Supermarket.BLBE.csprojAssemblyReference.cache

@@ -1,0 +1,42 @@
+﻿<UserControl x:Class="Supermarket.addProduct"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Supermarket"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+
+             mc:Ignorable="d" d:DesignWidth="800" Height="329">
+    <Grid Height="332" VerticalAlignment="Top" Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}">
+        <TextBlock HorizontalAlignment="Left" Margin="6,42,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="#FF6DAC1D" FontWeight="Bold" FontSize="25" FontFamily="Segoe UI Semibold" Width="185" Height="42"><Run FlowDirection="RightToLeft" Text="SMARTSHOP"/><LineBreak/><Run FlowDirection="RightToLeft"/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="26,76,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="#FF0D0D0D" FontSize="20" FontFamily="Century Gothic" Width="210" Height="43"><Run Text="Shop And Buy Simply"/></TextBlock>
+        <TextBlock HorizontalAlignment="Right" Margin="0,56,13,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="#FF0D0D0D" FontSize="30" FontFamily="Century Gothic" Width="183" Height="55" TextAlignment="Right"><Run FlowDirection="RightToLeft" Text="הוספת מוצר"/></TextBlock>
+        <Border x:Name="temp11" BorderThickness="1" BorderBrush="#FF000000" HorizontalAlignment="Left" VerticalAlignment="Top" Width="138" Height="126" Margin="53,128,0,0">
+            <Image x:Name="temp12" Stretch="Fill" Margin="-1.333,1.667,1.667,-1.333"/>
+        </Border>
+        <Border x:Name="temp21" BorderThickness="1" BorderBrush="#FF000000" HorizontalAlignment="Right" VerticalAlignment="Top" Width="135" Height="126" Margin="0,128,376,0">
+            <Image x:Name="temp22" Stretch="Fill" Margin="-1.333,-1.333,1.333,-1.333"/>
+        </Border>
+        <Button Content="QR" HorizontalAlignment="Left" Margin="85,270,0,0" VerticalAlignment="Top" Width="75" Click="loadtemp12" Background="#FF6DAC1D" BorderBrush="#FF6DAC1D"/>
+        <Button Content="image" HorizontalAlignment="Left" Margin="320,270,0,0" VerticalAlignment="Top" Width="75" Click="loadtemp22" Background="#FF6DAC1D" BorderBrush="#FF6DAC1D"/>
+        <Button Content="add product" HorizontalAlignment="Left" Margin="179,287,0,0" VerticalAlignment="Top" Width="115" Click="addPTemp"/>
+        <Image HorizontalAlignment="Left" Height="126" Margin="53,128,0,0" VerticalAlignment="Top" Width="138"/>
+        <TextBlock HorizontalAlignment="Left" Margin="551,104,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="#FF0D0D0D" FontSize="15" FontFamily="Century Gothic" Width="211" Height="92" TextAlignment="Right"><Span FlowDirection="RightToLeft"><Run Text="במידה והמוצר הוא מוצר חדש באפשרותך לסרוק את הברקוד שלו ולצרף תמונה על מנת שהפריט החדש יש"/><Run Text="מ"/><Run Text="ר במערכת"/></Span></TextBlock>
+        <Button
+                    HorizontalAlignment="Right"
+                    Click="Do_Nothing"
+                    Style="{StaticResource MaterialDesignIconButton}"
+                    ToolTip="MaterialDesignIconButton"
+                    Foreground="Black" Margin="0,171,418,231">
+            <materialDesign:PackIcon Kind="ScanHelper" />
+        </Button>
+        <Button
+            HorizontalAlignment="Right"
+            Click="Do_Nothing"
+            Style="{StaticResource MaterialDesignIconButton}"
+            ToolTip="MaterialDesignIconButton"
+            Foreground="Black" Margin="0,171,654,231">
+            <materialDesign:PackIcon Kind="ScanHelper" />
+        </Button>
+    </Grid>
+</UserControl>
